@@ -1,0 +1,16 @@
+<launch>
+
+  <node name="main" pkg="beginner_tutorials" type="combine1.py">
+  </node>
+
+  <node name="recognizer" pkg="pocketsphinx" type="recognizer.py" output="screen">
+    <param name="lm" value="$(find beginner_tutorials)/config/nav_commands.lm">
+    </param>
+    <param name="dict" value="$(find beginner_tutorials)/config/nav_commands.dic">
+    </param>
+  </node>
+
+  <node name="soundplay_node" pkg="sound_play" type="soundplay_node.py">
+  </node>
+
+</launch>

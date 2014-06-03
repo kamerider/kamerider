@@ -1,0 +1,17 @@
+<launch>
+
+  <node name="recognizer" pkg="pocketsphinx" type="recognizer.py" output="screen">
+    <param name="lm" value="$(find followme)/config/nav_commands.lm">
+    </param>
+    <param name="dict" value="$(find followme)/config/nav_commands.dic">
+    </param>
+  </node>
+
+  <node name="soundplay" pkg="sound_play" type="soundplay_node.py">
+  </node>
+
+  <node name="main" pkg="followme/src" type="follow_me4.py">
+    <remap from="follow_me4/cmd_vel" to="cmd_vel_mux"/>
+  </node>
+
+</launch>
