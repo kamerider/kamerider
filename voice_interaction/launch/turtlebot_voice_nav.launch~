@@ -1,0 +1,13 @@
+<launch>
+
+  <node name="voice_nav" pkg="pi_speech_tutorial" type="voice_nav.py" output="screen">
+    <param name="scale_linear" value="0.5" type="double"/>
+    <param name="scale_angular" value="1.5" type="double"/>
+  	<param name="max_speed" value="0.35"/>
+  	<param name="start_speed" value="0.2"/>
+  	<param name="linear_increment" value="0.05"/>
+  	<param name="angular_increment" value="0.25"/>
+    <remap from="voice_nav/cmd_vel" to="cmd_vel_mux/input/teleop"/>
+  </node>
+
+</launch>
