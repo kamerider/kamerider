@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/659/trunk/pi_tutorials/pi_speech_tutorial/launch
+END
+voice_nav_commands.launch
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/615/trunk/pi_tutorials/pi_speech_tutorial/launch/voice_nav_commands.launch
+END
+talkback.launch
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/611/trunk/pi_tutorials/pi_speech_tutorial/launch/talkback.launch
+END
+turtlebot_voice_nav.launch
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/659/trunk/pi_tutorials/pi_speech_tutorial/launch/turtlebot_voice_nav.launch
+END
