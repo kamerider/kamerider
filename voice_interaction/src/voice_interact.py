@@ -26,7 +26,7 @@ class Voice_Interact:
         self.angular_speed = rospy.get_param("~start_angular_speed", 0.5)
         self.linear_increment = rospy.get_param("~linear_increment", 0.05)
         self.angular_increment = rospy.get_param("~angular_increment", 0.25)
-        self.rate = rospy.get_param("~rate", 5)
+        self.rate = rospy.get_param("~rate", 3)
         r = rospy.Rate(self.rate)
         self.paused = False
           
@@ -53,7 +53,7 @@ class Voice_Interact:
         rospy.loginfo("Say one of the navigation commands...")
 
         # Subscribe to the recognizer output
-        rospy.Subscriber('/recognizer/output', String, self.talkback)
+        rospy.Subscriber('/recognizer/output', String, self.reply)
 
 	# A mapping from keywords to commands.
         self.keywords_to_command = {'stop': ['stop', 'halt', 'abort', 'kill', 'panic', 'off', 'freeze', 'shut down', 'turn off', 'help', 'help me','cancel','please stop moving'],
@@ -83,7 +83,7 @@ class Voice_Interact:
                 if data.find(word) > -1:
                     return command
         
-    def talkback(self, msg):
+    def reply(self, msg):
 	command = self.get_command(msg.data)
 
         # Print the recognized words on the screen
@@ -186,7 +186,7 @@ class Voice_Interact:
 	    		confirming = 0
 
     def cleanup(self):
-        rospy.loginfo("Shutting down talkback node...")
+        rospy.loginfo("Shutting down voice interaction...")
         twist = Twist()
         self.cmd_vel_pub.publish(twist)
 

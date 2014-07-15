@@ -17,7 +17,7 @@
 
   	<param name="voice" value="voice_don_diphone"/>
   	<param name="wavepath" value="$(find pi_speech_tutorial)/sounds"/>
-    <remap from="talkback/cmd_vel" to="cmd_vel_mux/input/teleop"/>
+    <remap from="voice_interact/cmd_vel" to="cmd_vel_mux/input/teleop"/>
   </node>
 
 </launch>
