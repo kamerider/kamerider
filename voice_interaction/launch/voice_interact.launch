@@ -1,13 +1,13 @@
 <launch>
 
   <node name="recognizer" pkg="pocketsphinx" type="recognizer.py">
-    <param name="lm" value="$(find pi_speech_tutorial)/config/nav_commands.lm"/>
-    <param name="dict" value="$(find pi_speech_tutorial)/config/nav_commands.dic"/>
+    <param name="lm" value="$(find voice_interaction)/config/nav_commands.lm"/>
+    <param name="dict" value="$(find voice_interaction)/config/nav_commands.dic"/>
   </node>
 
   <node name="soundplay_node" pkg="sound_play" type="soundplay_node.py" output="screen"/>
 
-  <node name="talkback" pkg="pi_speech_tutorial" type="talkback.py" output="screen">
+  <node name="voice_interact" pkg="voice_interaction" type="voice_interact.py" output="screen">
     <param name="scale_linear" value="0.5" type="double"/>
     <param name="scale_angular" value="1.5" type="double"/>
   	<param name="max_speed" value="0.35"/>

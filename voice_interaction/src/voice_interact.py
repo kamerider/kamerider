@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 
 """
-    talkback.py - Say back what is heard by the pocketsphinx recognizer.
+    voice_interact.py - reconfirm before executing voice navigation command
+
 """
 
 import roslib; roslib.load_manifest('pi_speech_tutorial')
@@ -15,7 +16,7 @@ confirming = 0
 recognise = 1
 memory = 'None'
 
-class TalkBack:
+class Voice_Interact:
     def __init__(self):
         rospy.on_shutdown(self.cleanup)
 
@@ -58,7 +59,7 @@ class TalkBack:
         self.keywords_to_command = {'stop': ['stop', 'halt', 'abort', 'kill', 'panic', 'off', 'freeze', 'shut down', 'turn off', 'help', 'help me','cancel','please stop moving'],
                                     'go slower': ['slow down', 'slower'],
                                     'go faster': ['speed up', 'faster'],
-                                    'go forward': ['forward', 'ahead', 'straight','move forward','start'],
+                                    'go ahead': ['forward', 'ahead', 'straight','move forward','start'],
                                     'go backward': ['back', 'backward', 'back up','move backward','reverse'],
                                     'rotate left': ['rotate left'],
                                     'rotate right': ['rotate right'],
@@ -112,7 +113,7 @@ class TalkBack:
 			    	self.paused = False
 			if self.paused:
 			    	return   
-			if memory == 'go forward':    
+			if memory == 'go ahead':    
 			    	self.msg.linear.x = self.speed
 			    	self.msg.angular.z = 0
 			elif memory == 'rotate left':
@@ -184,24 +185,15 @@ class TalkBack:
 			global confirming
 	    		confirming = 0
 
-        
-        # Uncomment to play one of the built-in sounds
-        #rospy.sleep(2)
-        #self.soundhandle.play(5)
-        
-        # Uncomment to play a wave file
-        #rospy.sleep(2)
-        #self.soundhandle.playWave(self.wavepath + "/R2D2a.wav")
-
     def cleanup(self):
         rospy.loginfo("Shutting down talkback node...")
         twist = Twist()
         self.cmd_vel_pub.publish(twist)
 
 if __name__=="__main__":
-    rospy.init_node('talkback')
+    rospy.init_node('voice_interact')
     try:
-        TalkBack()
+        Voice_Interact()
         rospy.spin()
     except:
         pass
