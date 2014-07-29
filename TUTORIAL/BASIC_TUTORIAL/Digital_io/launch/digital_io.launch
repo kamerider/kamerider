@@ -1,0 +1,5 @@
+<launch>
+
+  <node name="digital_IO" pkg="Digital_io" type="digital_io.py" output="screen"/>
+
+</launch>
