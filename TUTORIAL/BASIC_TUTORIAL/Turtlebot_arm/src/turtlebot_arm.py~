@@ -24,7 +24,7 @@ class Loop:
     	self.pos4 = Float64()
     	self.pos5 = Float64()
 	
-	# Initial position of robot arm
+	# Initial gesture of robot arm
 	self.pos1 = 1.565
 	self.pos2 = 2.102
 	self.pos3 = -2.439
@@ -38,6 +38,7 @@ class Loop:
 
 	while not rospy.is_shutdown():
 
+		# gesture 1
 		self.pos1 = 1.559
 		self.pos2 = 0.215
 		self.pos3 = -1.508
@@ -49,7 +50,8 @@ class Loop:
 		self.joint4.publish(self.pos4)
 		self.joint5.publish(self.pos5)
 		rospy.sleep(2)
-
+		
+		# gesture 2
 		self.pos1 = 1.565
 		self.pos2 = -2.393
 		self.pos3 = -0.639
@@ -62,6 +64,7 @@ class Loop:
 		self.joint5.publish(self.pos5)
 		rospy.sleep(3)
 
+		# gesture 1
 		self.pos1 = 1.559
 		self.pos2 = 0.215
 		self.pos3 = -1.508
@@ -74,6 +77,7 @@ class Loop:
 		self.joint5.publish(self.pos5)
 		rospy.sleep(2)
 
+		# initial gesture
 		self.pos1 = 1.565
 		self.pos2 = 2.102
 		self.pos3 = -2.439

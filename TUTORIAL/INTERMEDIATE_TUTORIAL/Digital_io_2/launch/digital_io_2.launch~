@@ -1,0 +1,7 @@
+<launch>
+
+  <node name="soundplay_node" pkg="sound_play" type="soundplay_node.py" output="screen"/>
+
+  <node name="digital_IO" pkg="Digital_io_2" type="digital_io_2.py" output="screen"/>
+
+</launch>

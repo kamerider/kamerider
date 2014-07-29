@@ -1,0 +1,92 @@
+Language model created by QuickLM on Thu Jul 24 00:58:22 EDT 2014
+Copyright (c) 1996-2010 Carnegie Mellon University and Alexander I. Rudnicky
+
+The model is in standard ARPA format, designed by Doug Paul while he was at MITRE.
+
+The code that was used to produce this language model is available in Open Source.
+Please visit http://www.speech.cs.cmu.edu/tools/ for more information
+
+The (fixed) discount mass is 0.5. The backoffs are computed using the ratio method.
+This model based on a corpus of 12 sentences and 18 words
+
+\data\
+ngram 1=18
+ngram 2=29
+ngram 3=22
+
+\1-grams:
+-0.9120 </s> -0.3010
+-0.9120 <s> -0.2443
+-1.9912 ABORT -0.2443
+-1.9912 ARGENTINA -0.2443
+-1.9912 BACK -0.2783
+-1.9912 BRAZIL -0.2443
+-1.9912 CHINA -0.2443
+-1.9912 CONFIRM -0.2443
+-1.9912 DENMARK -0.2443
+-1.2131 GO -0.2688
+-1.9912 HOME -0.2443
+-1.9912 NEGATIVE -0.2443
+-1.9912 NO -0.2443
+-1.9912 ORIGINAL -0.2966
+-1.9912 PLACE -0.2443
+-1.9912 POSITIVE -0.2443
+-1.2923 TO -0.2783
+-1.9912 YES -0.2443
+
+\2-grams:
+-1.3802 <s> ABORT 0.0000
+-1.3802 <s> CONFIRM 0.0000
+-0.6021 <s> GO 0.0000
+-1.3802 <s> NEGATIVE 0.0000
+-1.3802 <s> NO 0.0000
+-1.3802 <s> POSITIVE 0.0000
+-1.3802 <s> YES 0.0000
+-0.3010 ABORT </s> -0.3010
+-0.3010 ARGENTINA </s> -0.3010
+-0.3010 BACK TO -0.2553
+-0.3010 BRAZIL </s> -0.3010
+-0.3010 CHINA </s> -0.3010
+-0.3010 CONFIRM </s> -0.3010
+-0.3010 DENMARK </s> -0.3010
+-1.0792 GO BACK 0.0000
+-1.0792 GO HOME 0.0000
+-0.4771 GO TO -0.0792
+-0.3010 HOME </s> -0.3010
+-0.3010 NEGATIVE </s> -0.3010
+-0.3010 NO </s> -0.3010
+-0.3010 ORIGINAL PLACE 0.0000
+-0.3010 PLACE </s> -0.3010
+-0.3010 POSITIVE </s> -0.3010
+-1.0000 TO ARGENTINA 0.0000
+-1.0000 TO BRAZIL 0.0000
+-1.0000 TO CHINA 0.0000
+-1.0000 TO DENMARK 0.0000
+-1.0000 TO ORIGINAL 0.0000
+-0.3010 YES </s> -0.3010
+
+\3-grams:
+-0.3010 <s> ABORT </s>
+-0.3010 <s> CONFIRM </s>
+-1.0792 <s> GO BACK
+-1.0792 <s> GO HOME
+-0.4771 <s> GO TO
+-0.3010 <s> NEGATIVE </s>
+-0.3010 <s> NO </s>
+-0.3010 <s> POSITIVE </s>
+-0.3010 <s> YES </s>
+-0.3010 BACK TO ORIGINAL
+-0.3010 GO BACK TO
+-0.3010 GO HOME </s>
+-0.9031 GO TO ARGENTINA
+-0.9031 GO TO BRAZIL
+-0.9031 GO TO CHINA
+-0.9031 GO TO DENMARK
+-0.3010 ORIGINAL PLACE </s>
+-0.3010 TO ARGENTINA </s>
+-0.3010 TO BRAZIL </s>
+-0.3010 TO CHINA </s>
+-0.3010 TO DENMARK </s>
+-0.3010 TO ORIGINAL PLACE
+
+\end\

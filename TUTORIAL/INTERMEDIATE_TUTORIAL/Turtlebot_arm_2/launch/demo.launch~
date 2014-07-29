@@ -1,0 +1,50 @@
+<launch>
+
+  <node name="arbotix" pkg="arbotix_python" type="arbotix_driver" output="screen">
+      <rosparam file="$(find turtlebot_arm_bringup)/config/arm.yaml" command="load" />
+  </node>
+
+  <node name="single_gripper_controller" pkg="arbotix_controllers" type="gripper_controller">
+      <param name="model" value="singlesided"/>
+      <param name="invert" value="true"/>
+      <param name="pad_width" value="0.0254"/>
+  </node>
+
+  <!-- Location of the cmvision color file -->
+  <param name="cmvision/color_file" type="string" 
+         value="$(find cmvision)/colors.txt" />
+
+  <!-- Turn debug output on or off -->
+  <param name="cmvision/debug_on" type="bool" value="true"/>
+
+  <!-- Turn color calibration on or off -->
+  <param name="cmvision/color_cal_on" type="bool" value="false"/>
+
+  <!-- Enable Mean shift filtering -->
+  <param name="cmvision/mean_shift_on" type="bool" value="false"/>
+
+  <!-- Spatial bandwidth: Bigger = smoother image -->
+  <param name="cmvision/spatial_radius_pix" type="double" value="2.0"/>
+
+  <!-- Color bandwidth: Bigger = smoother image-->
+  <param name="cmvision/color_radius_pix" type="double" value="40.0"/>
+
+  <node name="cmvision" pkg="cmvision" type="cmvision" args="image:=/camera/rgb/image_color" 
+        output="screen" />
+
+
+  <node name="recognizer" pkg="pocketsphinx" type="recognizer.py" output="screen">
+    <param name="lm" value="$(find demo)/config/nav_commands.lm">
+    </param>
+    <param name="dict" value="$(find demo)/config/nav_commands.dic">
+    </param>
+  </node>
+
+  <node name="soundplay_node" pkg="sound_play" type="soundplay_node.py" output="screen" />
+
+  <node name="demo" pkg="demo" type="demo.py" output="screen">
+  	<param name="voice" value="voice_don_diphone"/>
+  	<param name="wavepath" value="$(find pi_speech_tutorial)/sounds"/>
+  </node>
+
+</launch>
