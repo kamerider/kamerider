@@ -1,0 +1,5 @@
+<launch>
+
+  <node name="colour_tracker" pkg="colour_tracking_2" type="colour_tracking_2.py" output="screen"/>
+
+</launch>

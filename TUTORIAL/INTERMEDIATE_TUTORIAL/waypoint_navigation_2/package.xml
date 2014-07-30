@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package>
+  <name>waypoint_navigation_2</name>
+  <version>1.0.0</version>
+  <description> Enable turtlebot to navigate to certain predefined location using voice command </description>
+
+  <maintainer email="yiploonseow91@gmail.com">seow</maintainer>
+
+  <license>BSD</license>
+
+
+  <url>http://ros.org/wiki/pi_speech_tutorial</url>
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>roscpp</build_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>std_msgs</build_depend>
+
+  <run_depend>roscpp</run_depend>
+  <run_depend>rospy</run_depend>
+  <run_depend>std_msgs</run_depend>
+  <run_depend>pocketsphinx</run_depend>
+  <run_depend>sound_play</run_depend>
+
+  <export>
+
+  </export>
+</package>
