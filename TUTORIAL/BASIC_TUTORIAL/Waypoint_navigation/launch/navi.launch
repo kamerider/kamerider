@@ -1,7 +1,0 @@
-<launch>
-
-  <node name="navi_point" pkg="Waypoint_navigation" type="navi.py" output="screen">
-
-  </node>
-
-</launch>
