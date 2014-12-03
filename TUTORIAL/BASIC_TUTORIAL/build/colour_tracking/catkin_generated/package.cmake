@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "colour_tracking")
+set(colour_tracking_MAINTAINER "seow <yiploonseow91@gmail.com>")
+set(colour_tracking_DEPRECATED "")
+set(colour_tracking_VERSION "1.0.0")
+set(colour_tracking_BUILD_DEPENDS "roscpp" "rospy" "std_msgs")
+set(colour_tracking_RUN_DEPENDS "roscpp" "rospy" "std_msgs")
+set(colour_tracking_BUILDTOOL_DEPENDS "catkin")

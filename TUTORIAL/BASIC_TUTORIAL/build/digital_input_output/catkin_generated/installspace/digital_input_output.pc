@@ -1,0 +1,8 @@
+prefix=/home/seow/kamerider/TUTORIAL/BASIC_TUTORIAL/install
+
+Name: digital_input_output
+Description: Description of digital_input_output
+Version: 1.0.0
+Cflags: 
+Libs: -L/home/seow/kamerider/TUTORIAL/BASIC_TUTORIAL/install/lib 
+Requires: 

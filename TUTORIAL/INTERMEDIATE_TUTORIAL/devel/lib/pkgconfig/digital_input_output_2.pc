@@ -1,0 +1,8 @@
+prefix=/home/seow/kamerider/TUTORIAL/INTERMEDIATE_TUTORIAL/devel
+
+Name: digital_input_output_2
+Description: Description of digital_input_output_2
+Version: 1.0.0
+Cflags: 
+Libs: -L/home/seow/kamerider/TUTORIAL/INTERMEDIATE_TUTORIAL/devel/lib 
+Requires: 

@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "turtlebot_arm")
+set(turtlebot_arm_MAINTAINER "seow <yiploonseow91@gmail.com>")
+set(turtlebot_arm_DEPRECATED "")
+set(turtlebot_arm_VERSION "1.0.0")
+set(turtlebot_arm_BUILD_DEPENDS "roscpp" "rospy" "std_msgs")
+set(turtlebot_arm_RUN_DEPENDS "roscpp" "rospy" "std_msgs")
+set(turtlebot_arm_BUILDTOOL_DEPENDS "catkin")

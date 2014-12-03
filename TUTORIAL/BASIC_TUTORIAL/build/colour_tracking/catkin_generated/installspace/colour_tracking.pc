@@ -1,0 +1,8 @@
+prefix=/home/seow/kamerider/TUTORIAL/BASIC_TUTORIAL/install
+
+Name: colour_tracking
+Description: Description of colour_tracking
+Version: 1.0.0
+Cflags: 
+Libs: -L/home/seow/kamerider/TUTORIAL/BASIC_TUTORIAL/install/lib 
+Requires: 

@@ -1,0 +1,8 @@
+prefix=/home/seow/kamerider/TUTORIAL/BASIC_TUTORIAL/devel
+
+Name: turtlebot_arm
+Description: Description of turtlebot_arm
+Version: 1.0.0
+Cflags: 
+Libs: -L/home/seow/kamerider/TUTORIAL/BASIC_TUTORIAL/devel/lib 
+Requires: 

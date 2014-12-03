@@ -1,0 +1,8 @@
+prefix=/home/seow/kamerider/TUTORIAL/INTERMEDIATE_TUTORIAL/devel
+
+Name: speech_interaction_2
+Description: Description of speech_interaction_2
+Version: 1.0.0
+Cflags: 
+Libs: -L/home/seow/kamerider/TUTORIAL/INTERMEDIATE_TUTORIAL/devel/lib 
+Requires: 

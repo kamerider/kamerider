@@ -1,0 +1,65 @@
+<launch>
+
+  <node name="dynamixel_manager" pkg="dynamixel_controllers" type="controller_manager.py" required="true" output="screen">
+      <rosparam>
+            namespace: dxl_manager
+            serial_ports:
+                servo_joints_port:
+                    port_name: "/dev/ttyUSB0"
+                    baud_rate: 1000000
+                    min_motor_id: 1
+                    max_motor_id: 25
+                    update_rate: 20
+      </rosparam>
+  </node>
+
+  <!-- Location of the cmvision color file -->
+  <param name="cmvision/color_file" type="string" 
+         value="$(find cmvision)/colors.txt" />
+
+  <!-- Turn debug output on or off -->
+  <param name="cmvision/debug_on" type="bool" value="true"/>
+
+  <!-- Turn color calibration on or off -->
+  <param name="cmvision/color_cal_on" type="bool" value="false"/>
+
+  <!-- Enable Mean shift filtering -->
+  <param name="cmvision/mean_shift_on" type="bool" value="false"/>
+
+  <!-- Spatial bandwidth: Bigger = smoother image -->
+  <param name="cmvision/spatial_radius_pix" type="double" value="2.0"/>
+
+  <!-- Color bandwidth: Bigger = smoother image-->
+  <param name="cmvision/color_radius_pix" type="double" value="40.0"/>
+
+  <!-- <node name="cmvision" pkg="cmvision" type="cmvision" args="image:=/camera/rgb/image_color" 
+        output="screen" /> -->
+
+  <rosparam file="$(find my_dynamixel_tutorial)/config/joints.yaml" command="load"/>
+
+  <node name="tilt_controller_spawner" pkg="dynamixel_controllers" type="controller_spawner.py"
+        args="--manager=dxl_manager
+                --port servo_joints_port
+                arm_shoulder_pan_joint
+		arm_shoulder_lift_joint
+		arm_elbow_flex_joint
+		arm_wrist_flex_joint
+		gripper_joint"
+        output="screen"/>
+
+
+  <node name="recognizer" pkg="pocketsphinx" type="recognizer.py" output="screen">
+    <param name="lm" value="$(find demo_2)/config/nav_commands.lm">
+    </param>
+    <param name="dict" value="$(find demo_2)/config/nav_commands.dic">
+    </param>
+  </node>
+
+  <node name="soundplay_node" pkg="sound_play" type="soundplay_node.py" output="screen" />
+
+  <node name="demo" pkg="demo_2" type="demo_2.py" output="screen">
+  	<param name="voice" value="voice_don_diphone"/>
+  	<param name="wavepath" value="$(find pi_speech_tutorial)/sounds"/>
+  </node>
+
+</launch>

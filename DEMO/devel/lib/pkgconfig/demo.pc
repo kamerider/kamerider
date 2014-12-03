@@ -1,0 +1,8 @@
+prefix=/home/seow/kamerider/DEMO/devel
+
+Name: demo
+Description: Description of demo
+Version: 1.0.0
+Cflags: 
+Libs: -L/home/seow/kamerider/DEMO/devel/lib 
+Requires: 

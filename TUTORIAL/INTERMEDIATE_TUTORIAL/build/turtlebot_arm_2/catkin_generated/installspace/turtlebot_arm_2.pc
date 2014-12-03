@@ -1,0 +1,8 @@
+prefix=/home/seow/kamerider/TUTORIAL/INTERMEDIATE_TUTORIAL/install
+
+Name: turtlebot_arm_2
+Description: Description of turtlebot_arm_2
+Version: 1.0.0
+Cflags: 
+Libs: -L/home/seow/kamerider/TUTORIAL/INTERMEDIATE_TUTORIAL/install/lib 
+Requires: 

@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "digital_input_output")
+set(digital_input_output_MAINTAINER "seow <yiploonseow91@gmail.com>")
+set(digital_input_output_DEPRECATED "")
+set(digital_input_output_VERSION "1.0.0")
+set(digital_input_output_BUILD_DEPENDS "roscpp" "rospy" "std_msgs")
+set(digital_input_output_RUN_DEPENDS "roscpp" "rospy" "std_msgs")
+set(digital_input_output_BUILDTOOL_DEPENDS "catkin")

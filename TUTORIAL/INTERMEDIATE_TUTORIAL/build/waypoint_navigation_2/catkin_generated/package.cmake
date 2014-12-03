@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "waypoint_navigation_2")
+set(waypoint_navigation_2_MAINTAINER "seow <yiploonseow91@gmail.com>")
+set(waypoint_navigation_2_DEPRECATED "")
+set(waypoint_navigation_2_VERSION "1.0.0")
+set(waypoint_navigation_2_BUILD_DEPENDS "roscpp" "rospy" "std_msgs")
+set(waypoint_navigation_2_RUN_DEPENDS "roscpp" "rospy" "std_msgs" "pocketsphinx" "sound_play")
+set(waypoint_navigation_2_BUILDTOOL_DEPENDS "catkin")

@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "demo")
+set(demo_MAINTAINER "seow <yiploonseow91@gmail.com>")
+set(demo_DEPRECATED "")
+set(demo_VERSION "1.0.0")
+set(demo_BUILD_DEPENDS "roscpp" "rospy" "std_msgs")
+set(demo_RUN_DEPENDS "roscpp" "rospy" "std_msgs")
+set(demo_BUILDTOOL_DEPENDS "catkin")
